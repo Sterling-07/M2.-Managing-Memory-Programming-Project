@@ -9,7 +9,7 @@ void print(const int arr[], int size);
 
 int main()
 {
-	int size = 7;
+	const int size = 6;
 	int* arr = new int[size];
 
 	for (int a = 0; a < size; a++)
@@ -19,19 +19,27 @@ int main()
 		cout << endl;
 	}
 
-	delete[] arr;
+	int *ptr = ReverseArray(arr, size);
 
-	return 0;
+
+	delete[] arr;
+	
+	return 0; 
 }
 
 int* ReverseArray(const int arr[], int size)
 {
+	int* backwards = new int[size];
+	 
+	for (int a = 0; a < size; a++)
+	{
+		backwards[a] = arr[size - 1 - a];
+	}
 
-
-	return nullptr;
+	return backwards;
 }
 
 void print(const int arr[], int size)
 {
-
+	
 }
