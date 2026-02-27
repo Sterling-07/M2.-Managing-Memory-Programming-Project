@@ -20,7 +20,10 @@ int main()
 	}
 
 	int *ptr = ReverseArray(arr, size);
-
+	cout << "Original Array:\n";
+	print(arr, size);
+	cout << "Reversed Array:\n";
+	print(ptr, size);
 
 	delete[] arr;
 	
@@ -41,5 +44,8 @@ int* ReverseArray(const int arr[], int size)
 
 void print(const int arr[], int size)
 {
-	
+	for (int a = 0; a < size; a++)
+	{
+		cout << arr[a] << " " << endl;
+	}
 }
