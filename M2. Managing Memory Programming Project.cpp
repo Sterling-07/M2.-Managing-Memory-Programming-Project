@@ -43,6 +43,7 @@ int main()
 
 	//Safely delete the dynamically allocated memory from the array. 
 	delete[] arr;
+	delete[] ptr;
 	
 	return 0; 
 }
